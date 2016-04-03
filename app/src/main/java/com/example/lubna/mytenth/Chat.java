@@ -32,7 +32,6 @@ public class Chat {
 
     public double getQuantity() {return quantity;}
 
-    public void setCost(double cost) {
-        this.cost = cost;
-    }
+    public double getCost() {return cost;}
+
 }

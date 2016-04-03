@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
 //        }
     }
 
-    public void facebookMethod(View view) {
+    public void openFacebook(View view) {
         Uri uri = Uri.parse("http://www.facebook.com/sujeethjinesh");
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);
