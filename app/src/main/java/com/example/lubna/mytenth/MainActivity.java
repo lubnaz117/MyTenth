@@ -82,8 +82,15 @@ public class MainActivity extends AppCompatActivity {
 //        }
     }
 
+<<<<<<< HEAD
     public void openFacebook(View view) {
 
+=======
+    public void facebookMethod(View view) {
+        Uri uri = Uri.parse("http://www.facebook.com/sujeethjinesh");
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
+>>>>>>> parent of bf7ac81... IT WORKS
     }
 
     private void goToSecondActivity() {

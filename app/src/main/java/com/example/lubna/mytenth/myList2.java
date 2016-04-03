@@ -23,7 +23,7 @@ import java.util.Random;
 public class myList2 extends ListActivity {
 
     // TODO: change this to your own Firebase URL
-    private static final String FIREBASE_URL = "https://boiling-fire-1372.firebaseio.com/";
+    private static final String FIREBASE_URL = "https://boiling-fire-1372.firebaseio.com";
 
     private String mUsername;
     private Firebase mFirebaseRef;
@@ -125,25 +125,33 @@ public class myList2 extends ListActivity {
         int inputNum = inputs.length;
 
         if (!input.equals("")) {
-            String name, item;
+            String author, message;
             Double qty;
             if (inputNum < 3) {
-                name = "JP";
-                item = inputs[0];
+                author = "JP";
+                message = inputs[0];
                 qty= Double.parseDouble(inputs[1]);
             }
             else {
-                name = inputs[0];
-                item = inputs[1];
+                author = inputs[0];
+                message = inputs[1];
                 qty= Double.parseDouble(inputs[2]);
             }
 
+<<<<<<< HEAD
                 Chat chat = new Chat(item, name, qty);
 //                mFirebaseRef.push().setValue(chat);
                 Firebase itemRef = mFirebaseRef.child(Integer.toString(listNum));
                 itemRef.setValue(chat);
+=======
+                Chat chat = new Chat(message, author, qty);
+                Firebase itemRef = mFirebaseRef.child(author);
+                itemRef.setValue(chat);
+
+//            mFirebaseRef.push().setValue(chat);
+>>>>>>> parent of bf7ac81... IT WORKS
                 inputText.setText("");
                 listNum++;
         }
     }
-}
+    }
