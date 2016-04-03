@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MyTenth</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_my_list">myList</string>
+    <string name="add_item">Add New Item</string>
+    <string name="title_activity_group_list">group_list</string>
+    <string name="title_activity_go_shopping">go_shopping</string>
+    <string name="title_activity_my_list2">myList2</string>
+    <string name="title_activity_chat_message">chat_message</string>
+</resources>
