@@ -34,6 +34,13 @@ public class MainActivity extends AppCompatActivity {
                 goToSecondActivity();
             }
         });
+        Button button2 = (Button) findViewById(R.id.button2);
+        button2.setOnClickListener (new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                gotogroup();
+            }
+        });
         Firebase.setAndroidContext(this);
     }
 
@@ -76,14 +83,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openFacebook(View view) {
-        Uri uri = Uri.parse("http://www.facebook.com/sujeethjinesh");
-        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-        startActivity(intent);
+
     }
 
     private void goToSecondActivity() {
         Intent intent = new Intent(this, myList2.class);
         startActivity(intent);
     }
-
+    private void gotogroup() {
+        Intent intent = new Intent(this, group_list.class);
+        startActivity(intent);
+    }
 }

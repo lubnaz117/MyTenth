@@ -4,6 +4,7 @@ import android.app.ListActivity;
 import android.content.SharedPreferences;
 import android.database.DataSetObserver;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
@@ -11,7 +12,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import android.support.v7.app.AppCompatActivity;
 import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
@@ -28,12 +29,12 @@ public class myList2 extends ListActivity {
     private Firebase mFirebaseRef;
     private ValueEventListener mConnectedListener;
     private ChatListAdapter mChatListAdapter;
+    private int listNum = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_list2);
-
         // Make sure we have a mUsername
         setupUsername();
 
@@ -138,9 +139,11 @@ public class myList2 extends ListActivity {
             }
 
                 Chat chat = new Chat(item, name, qty);
-                mFirebaseRef.push().setValue(chat);
+//                mFirebaseRef.push().setValue(chat);
+                Firebase itemRef = mFirebaseRef.child(Integer.toString(listNum));
+                itemRef.setValue(chat);
                 inputText.setText("");
+                listNum++;
         }
-
     }
 }

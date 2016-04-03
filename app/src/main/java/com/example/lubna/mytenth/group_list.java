@@ -11,13 +11,17 @@ import com.firebase.client.Firebase;
 
 public class group_list extends AppCompatActivity {
 
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_group_list);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        getSupportActionBar().setTitle("Group List");
 //        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 //        fab.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -30,6 +34,9 @@ public class group_list extends AppCompatActivity {
 //        var fredRef = usersRef.child('JP');
 //        var fredFirstNameRef = fredRef.child('name/first');
 //        var path = fredFirstNameRef.toString();
+    }
+    private void openFacebook(){
+
     }
 
 }
